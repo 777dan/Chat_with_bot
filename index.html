@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let answers = [
+            "Наш менеджер перезвонит Вам в ближайшее время!",
+            "Уточнить детали можно по телефону 123456789",
+            "Оставайтесь на связи!",
+            "Сегодня прекрасная погода!",
+            "С Вами очень приятно общаться!"];
+        while (true) {
+            let question = prompt("Пиши");
+            if (question == "Привет" || question == "привет") {
+                alert("Приветствую!");
+            }
+            else if (question == "Ты кто?" || question == "ты кто?" || question == "Ты кто" || question == "ты кто") {
+                alert("Я бот Вася");
+            }
+            else if (question == "Пока" || question == "пока") {
+                alert("До свидания, рад был пообщаться!");
+                break;
+            }
+            else {
+                let random = Math.floor(Math.random() * answers.length);
+                let randomAnswers = answers[random];
+                alert(randomAnswers)
+            }
+        }
+    </script>
+</body>
+
+</html>
